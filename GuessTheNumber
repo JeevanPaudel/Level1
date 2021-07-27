@@ -1,0 +1,28 @@
+import random
+
+real_num = random.randint (1,10)       #Picking secret number by computer
+
+print("Today we are going to play Random Number Generator Game.")
+print("You have 3 chances to guess the number.\n")
+
+tries = 0
+guess = 0
+
+while guess != real_num and tries<3:     #continious loop
+    guess = int(input(" Enter the magic number :"))   #Getting players number
+    if guess > real_num:
+        print("Opps, Number too high.\n")
+        tries = tries + 1
+    if guess < real_num:
+        print("Hey, Number too low.\n")
+        tries = tries + 1
+
+if guess == real_num :
+    tries= tries+1
+    print("Correct.The magic number was",real_num,"and you guessed in ",tries,"times")
+else:
+    print("Game overrr!!! The magic number was : ",real_num)
+    print("See you Next time.")
+
+
+
